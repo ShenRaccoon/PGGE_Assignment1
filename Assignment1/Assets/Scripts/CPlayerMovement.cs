@@ -15,6 +15,13 @@ public class CPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleInputs();
+        Move();
+
+    }
+
+    void Move()
+    {
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
         float speed = walkSpeed;
@@ -32,5 +39,53 @@ public class CPlayerMovement : MonoBehaviour
 
         animator.SetFloat("PosX", 0);
         animator.SetFloat("PosZ", vInput * speed / 2.0f * walkSpeed);
+    }
+
+    void HandleInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Crouch();
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Attack1();
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            StopAttack1();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
+    }
+
+    void Jump()
+    {
+        animator.SetTrigger("Jump");
+    }
+
+    void Attack1()
+    {
+        animator.SetBool("Attack1", true);
+    }
+    void StopAttack1()
+    {
+        animator.SetBool("Attack1", false);
+    }
+
+    void Crouch()
+    {
+        animator.SetTrigger("Crouch");
+    }
+
+    void Reload()
+    {
+        animator.SetTrigger("Reload");
     }
 }
