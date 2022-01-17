@@ -9,7 +9,7 @@ public class CPlayerMovement : MonoBehaviour
     [SerializeField]
     Animator animator;
 
-    public float walkSpeed = 1.0f;
+    public float walkSpeed = .5f;
     public float rotationalSpeed = 50.0f;
 
 
