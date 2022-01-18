@@ -315,9 +315,9 @@ MonoBehaviour:
   cameraTransform: {fileID: 963194228}
   playerTransform: {fileID: 508126054}
   myCameraType: 2
-  mAngleOffset: {x: 0, y: 0, z: 0}
+  mAngleOffset: {x: 10, y: 0, z: 0}
   mDamping: 2
-  mPositionOffset: {x: 0, y: 2, z: -4}
+  mPositionOffset: {x: 0, y: 2.5, z: -5}
 --- !u!4 &824144570
 Transform:
   m_ObjectHideFlags: 0
