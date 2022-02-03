@@ -14,6 +14,7 @@ namespace TPC
         {
             Quaternion initialRotation = Quaternion.Euler(GameConstants.CameraAngleOffset);
             cameraTransform.rotation = Quaternion.Lerp(cameraTransform.rotation, playerTransform.rotation * initialRotation, Time.deltaTime * GameConstants.Damping);
+            RepositionCamera();
             base.Tick();
         }
     }

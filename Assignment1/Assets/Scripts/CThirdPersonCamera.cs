@@ -19,7 +19,7 @@ public class CThirdPersonCamera : MonoBehaviour
     Dictionary<CameraType, TPCBase> myCameras = new Dictionary<CameraType, TPCBase>();
 
     public Vector3 mAngleOffset;
-    public float mDamping = 1.0f;
+    public float mDamping = 0.1f;
     public Vector3 mPositionOffset;
 
     // Start is called before the first frame update
